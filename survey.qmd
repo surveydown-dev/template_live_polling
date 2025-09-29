@@ -1,0 +1,63 @@
+---
+# General Settings
+format: html
+echo: false
+warning: false
+
+# Theme Settings
+theme: default
+barposition: top
+footer-left: "Made with [surveydown](https://surveydown.org)"
+footer-right: '[<i class="bi bi-github"></i> Source Code](https://github.com/surveydown-dev/template_live_polling)'
+
+# Survey Settings
+use-cookies: false
+auto-scroll: false
+rate-survey: false
+system-language: en
+highlight-unanswered: true
+highlight-color: blue
+capture-metadata: true
+all-questions-required: false
+required-questions:
+  - penguins
+---
+
+```{r}
+library(surveydown)
+```
+
+::: {.sd_page id=welcome}
+
+# Template - Live Polling
+
+Here is a basic "multiple choice" question. The results will be displayed on the next page, showing both the choice you made as well as a summary of all the choices made by other participants.
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'penguins',
+  label = "Which type of penguin do you like the best?",
+  option = c(
+    'Adélie'    = 'adelie',
+    'Chinstrap' = 'chinstrap',
+    'Gentoo'    = 'gentoo'
+  )
+)
+
+sd_next()
+```
+
+:::
+
+::: {.sd_page id=results}
+
+You chose: **`r sd_output("penguins", type = "value")`**
+
+Summary of what everyone else has chosen:
+
+```{r}
+shiny::plotOutput('penguin_plot')
+```
+
+:::
