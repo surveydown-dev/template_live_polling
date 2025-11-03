@@ -27,7 +27,7 @@ required-questions:
 library(surveydown)
 ```
 
-::: {.sd_page id=welcome}
+--- welcome
 
 # Template - Live Polling
 
@@ -48,9 +48,7 @@ sd_question(
 sd_next()
 ```
 
-:::
-
-::: {.sd_page id=results}
+--- results
 
 You chose: **`r sd_output("penguins", type = "value")`**
 
@@ -59,5 +57,3 @@ Summary of what everyone else has chosen:
 ```{r}
 shiny::plotOutput('penguin_plot')
 ```
-
-:::
