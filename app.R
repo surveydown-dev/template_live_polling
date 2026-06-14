@@ -24,12 +24,15 @@ library(ggplot2)
 # database configuration parameters in a local .env file:
 
 # sd_db_config()
+#
+# Once your parameters are stored, you are ready to connect to your database.
+# This template runs in preview mode (set via `mode: preview` in survey.qmd),
+# which saves responses locally instead of to a database. Live polling reads
+# the responses back, so for a real multi-respondent poll, run sd_db_config()
+# to store your database credentials, then change `mode` to `database` in the
+# survey.qmd YAML header.
 
-# For this template, we recommend setting ignore = FALSE (or leaving it blank)
-# in the sd_db_connect() function, since live-polling requires a database to
-# work.
-
-db <- sd_db_connect(ignore = FALSE)
+db <- sd_db_connect()
 
 # UI setup --------------------------------------------------------------------
 
