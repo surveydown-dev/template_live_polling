@@ -1,8 +1,16 @@
->This template requires actual database connection to work, so it doesn't have an online demo.
+A reactive question template of live-polling with responses shown as a bar chart.
 
-A [reactive](https://surveydown.org/docs/reactivity.html) question template of live-polling with responses shown as a bar chart.
+### 🎬 Video
 
-To create this template, run this command in your R console:
+This template needs a live database connection, so it has no online demo. A video walkthrough is provided instead.
+
+### Template page
+
+https://surveydown.org/templates/live_polling
+
+### Create this template
+
+Run this command in your R console:
 
 ```r
 surveydown::sd_create_survey(
@@ -11,4 +19,6 @@ surveydown::sd_create_survey(
 )
 ```
 
-Refer to the [Start with a template](https://surveydown.org/docs/getting-started#start-with-a-template) section for more details.
+### Documentation
+
+[Reactivity](https://surveydown.org/docs/reactivity.html) · [Start with a template](https://surveydown.org/docs/getting-started#start-with-a-template)
