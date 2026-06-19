@@ -9,7 +9,7 @@ theme-settings:
   footer-right: '[<i class="bi bi-github"></i> Source Code](https://github.com/surveydown-dev/template_live_polling)'
 
 survey-settings:
-  mode: preview
+  mode: database
   show-previous: false
   use-cookies: false
   auto-scroll: false
