@@ -4,8 +4,6 @@ A reactive question template of live-polling with responses shown as a bar chart
 
 [![Walkthrough recording](video-thumbnail.png)](https://cdn.jsdelivr.net/gh/surveydown-dev/template_live_polling@main/video-recording.mp4)
 
-*Click the image above to play the recording.*
-
 ### Template page
 
 https://surveydown.org/templates/live_polling
